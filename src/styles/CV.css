@@ -24,4 +24,9 @@
 
 .info-li{
     list-style-type: none;
+    text-align: left;
+}
+.span-info-li{
+    font-size: large;
+    font-weight: 600;
 }

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
-import Information from "./components/Information";
-import Education from "./components/EducationExperience";
-import Practical from "./components/PracticalExperience";
+import './styles/PracticalExperience.css';
+import './styles/Information.css';
+import './styles/PracticalExperience.css';
+
+
 import Footer from "./components/Footer";
 import CV from "./components/CV";
 import uniqid from 'uniqid';
