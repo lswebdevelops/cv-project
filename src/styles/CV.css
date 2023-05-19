@@ -1,32 +1,80 @@
-.CV{
-    width: 800px;
-    border: solid firebrick 1px;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-
-}
-.left-cv{
-    width: 70%;
-    ;
-}
-.right-cv {
-   
-    width: 30%;
-    
-}
-.right-cv img{
-    width: 242px;
-    height: auto;
-}
-
-.info-li{
-    list-style-type: none;
-    text-align: left;
-}
-.span-info-li{
+.CV {
+    margin-top: 20px;
     font-size: large;
-    font-weight: 600;
+    display: flex;
+    
+  }
+  
+
+  .navbar-cv{
+    background-color: aquamarine;
+  }
+  .left-content-cv{
+background-color: aliceblue;
+  }
+  .right-content-cv{
+    background-color: aqua;
+  }
+
+
+
+
+li{
+    list-style-type: none;
+}
+
+.info-li-firstName{
+  
+  
+}
+.info-li-lastName{
+  
+}
+.info-li-email{
+  
+}
+.info-li-phone_number{
+  
+}
+.info-li-title{
+  
+}
+.info-li-address{
+  
+}
+.info-li-description{
+  
+}
+.info-li-position{
+  
+}
+.info-li-company{
+  
+}
+.info-li-city{
+  
+}
+.info-li-from{
+  
+}
+.info-li-to{
+  
+}
+.info-li-universityName{
+  
+}
+.info-li-universityCity{
+  
+}
+.info-li-degree{
+  
+}
+.info-li-subject{
+  
+}
+.info-li-universityFrom{
+  
+}
+.info-li-universityTo{
+  
 }
