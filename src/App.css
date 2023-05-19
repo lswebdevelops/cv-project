@@ -14,8 +14,18 @@
 
 .content {
   flex: 1;
-  text-align: right;
+  text-align: left;
   border: solid firebrick 1px;
   padding: 10px;
 
+}
+
+.content-image {
+  text-align: right;
+}
+
+.avatar-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 5%;
 }

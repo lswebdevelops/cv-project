@@ -38,30 +38,39 @@
 
 // export default Experiences;
 
+// Form1.js
 import React, { useState } from 'react';
 
 function Form1({ setSubmittedText, formIndex }) {
-  const [formData, setFormData] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [title, setTitle] = useState('Information');
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = { name, email };
     setSubmittedText(formIndex, formData);
   };
 
-  const handleInputChange = (event) => {
-    const { value } = event.target;
-    setFormData(value);
-  };
-
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label>
-        Form 1:
-        <input type="text" value={formData} onChange={handleInputChange} />
-      </label>
+    <form onSubmit={handleSubmit}>
+          <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Name"
+      />
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
+      />
       <button type="submit">Submit</button>
     </form>
   );
 }
 
 export default Form1;
+

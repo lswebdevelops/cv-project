@@ -17,23 +17,24 @@
 import React, { useState } from 'react';
 
 function Form2({ setSubmittedText, formIndex }) {
-  const [formData, setFormData] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = { name, email };
     setSubmittedText(formIndex, formData);
   };
 
-  const handleInputChange = (event) => {
-    const { value } = event.target;
-    setFormData(value);
-  };
-
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleSubmit}>
       <label>
-        Form 2:
-        <input type="text" value={formData} onChange={handleInputChange} />
+        Name:
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      </label>
+      <label>
+        Email:
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       </label>
       <button type="submit">Submit</button>
     </form>
