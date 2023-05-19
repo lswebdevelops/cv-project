@@ -12,7 +12,7 @@ class Education extends Component {
 
       return (
       <div className="Education">
-       <h1>Education</h1>
+       <h2>Education</h2>
        
       </div>
     );

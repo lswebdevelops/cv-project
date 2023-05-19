@@ -1,3 +1,7 @@
-/* *{
-    color: red;
-} */
+.Education {
+    width: 800px;
+    border: solid firebrick 1px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  

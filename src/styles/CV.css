@@ -1,0 +1,21 @@
+.CV{
+    width: 800px;
+    border: solid firebrick 1px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    ;
+}
+.left-cv{
+    width: 70%;
+    ;
+}
+.right-cv {
+   
+    width: 30%;
+    
+}
+.right-cv img{
+    width: 242px;
+    height: auto;
+}

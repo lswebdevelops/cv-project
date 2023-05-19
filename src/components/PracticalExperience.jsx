@@ -12,7 +12,7 @@ class Practical extends Component {
 
         return (
             <div className="Practical">
-       <h1>Practical</h1>
+       <h2>Practical</h2>
       </div>
     );
 }
