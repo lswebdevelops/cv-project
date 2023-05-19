@@ -1,29 +1,27 @@
-import React, {Component} from 'react';
-
-import '../styles/CV.css';
-
+import React, { Component } from "react";
+import "../styles/CV.css";
 
 class CV extends Component {
-  constructor(){
-      super();
+  constructor(props) {
+    super(props);
   }
-  render(){
 
-      return (
+  render() {
+    const { infos } = this.props;
+  
+    return (
       <div className="CV">
-            <div className='left-cv'>
-                <h2>General Information</h2>
-                <h2>Practival Experience</h2>
-                <h2>Education</h2>
-                <h2>Further Education</h2>
-            </div>
-            <div className='right-cv'>
-                <img  src={require(`../images/avatar.png`)} />
-            </div>
-
+        <ul>
+          {infos.map((info) => (
+            <React.Fragment key={info.id}>
+              <li className="info-li">{info.name}</li>
+              <li className="info-li">{info.email}</li>
+              <li className="info-li">{info.phone_number}</li>
+            </React.Fragment>
+          ))}
+        </ul>
       </div>
     );
   }
 }
-  export default CV;
-  
+export default CV;
