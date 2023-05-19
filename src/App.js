@@ -32,6 +32,17 @@ class App extends Component {
   };
 onSubmitInfo = (e) =>{
   e.preventDefault();
+// Check if task.text is empty
+if (this.state.info.name.trim() === "") {
+  return; // Exit the function if the text is empty
+}
+if (this.state.info.email.trim() === "") {
+  return; 
+}
+if (this.state.info.phone_number.trim() === "") {
+  return;
+}
+
 
   const newInfo = {
     name: this.state.info.name,
