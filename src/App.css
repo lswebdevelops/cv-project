@@ -8,6 +8,7 @@
   padding: 10px;
   font-size: 1.5rem;
   gap:25px;
+  box-shadow: 5px 15px 15px 15px rgba(149, 146, 146, 0.3);
 }
 
 .input-forms {
@@ -34,7 +35,7 @@
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   padding: 10px;
-  min-width: 700px;
+  min-width: 420px;
   padding: 0;
   margin: 0;
   background-color: rgb(238, 238, 238);
@@ -147,4 +148,11 @@ h1, p{
   width: 100%;
   height: 90px;
   font-size: 1rem;
+}
+
+
+@media (max-width: 500px) {
+  img {
+    display: none;
+  }
 }
