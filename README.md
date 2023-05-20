@@ -1,6 +1,7 @@
 
 
 
+![Website](https://github.com/lswebdevelops/cv-project/blob/master/src/images/screenshot.png)
 
 
 # Awesome Web Developer Portfolio
