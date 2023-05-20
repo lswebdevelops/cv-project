@@ -12,10 +12,10 @@ function Form1({ setSubmittedText, formIndex }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
-      email,
       firstName,
       lastName,
       title,
+      email,
       address,
       phoneNumber,
       description,

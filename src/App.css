@@ -44,12 +44,29 @@
   text-align: right;
   justify-content: space-between;
   display: flex;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(228, 230, 231);
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   padding-left: 12px;
   
  
+}
+.div-fistlastname{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+
+}
+.content-image p{
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  
+}
+.content-image p:nth-child(3) {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+
 }
 
 .avatar-image {
