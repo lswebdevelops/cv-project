@@ -25,8 +25,6 @@ This website was built using a combination of front-end and back-end technologie
 - HTML5 and CSS3 for structuring and styling the web pages
 - JavaScript for interactivity and dynamic elements
 - React.js for building the user interface and managing components
-- Node.js and Express.js for the back-end server and API development
-- MongoDB for the database to store and retrieve data
 - Git for version control and collaboration
 
 ## Projects
