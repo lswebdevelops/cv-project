@@ -1,70 +1,83 @@
-// import React, { Component } from "react";
-// import "../styles/Information.css";
-
-// class Informations extends Component {
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   render() {
-//     const { infos } = this.props;
-
-//     return (
-//       <div className="CV">
-//         <ul>
-//           {infos.map((info) => (
-//             <div key={info.id}>
-//              <div className="navbar-cv">
-//                {/* navbar */}
-//                <li className="info-li-firstName">{info.firstName}</li>
-//               <li className="info-li-lastName">{info.lastName}</li>
-//               <li className="info-li-title">{info.title}</li>
-//              </div>
-              
-//               <div className="left-content-cv">
-//                 {/* left content of ready cv */}
-//               {/* description */}
-//               <h2>Description</h2>
-//               <li className="info-li-description">{info.description}</li>
-          
-
-//              </div>             
-                         
-//             </div>
-//           ))}
-//         </ul>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Informations;
-
 import React, { useState } from 'react';
 
-function Form3({ setSubmittedText, formIndex }) {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+function Form1({ setSubmittedText, formIndex }) {
+   const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [title, setTitle] = useState('');
+  const [address, setAddress] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [description, setDescription] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = { name, email };
+    const formData = {
+      email,
+      firstName,
+      lastName,
+      title,
+      address,
+      phoneNumber,
+      description,
+    };
     setSubmittedText(formIndex, formData);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </label>
+    <form className="form-information" onSubmit={handleSubmit}>
+      <h2>Information</h2>
+      
+      <input
+        className="input-form"
+        type="text"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        placeholder="First Name"
+      />
+      <input
+        className="input-form"
+        type="text"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+        placeholder="Last Name"
+      />
+      <input
+        className="input-form"
+        type="text"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Title"
+      />
+      <input
+        className="input-form"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
+      />
+      <input
+        className="input-form"
+        type="text"
+        value={address}
+        onChange={(e) => setAddress(e.target.value)}
+        placeholder="Address"
+      />
+      <input
+        className="input-form"
+        type="tel"
+        value={phoneNumber}
+        onChange={(e) => setPhoneNumber(e.target.value)}
+        placeholder="Phone Number"
+      />
+      <textarea
+         className="input-form textarea-no-resize" 
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
       <button type="submit">Submit</button>
     </form>
   );
 }
 
-export default Form3;
+export default Form1;

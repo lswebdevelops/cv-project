@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import Form1 from './Experiences';
-import Form2 from './Footer';
-import Form3 from './Information';
-import "../App.css"
+import React, { useState } from "react";
+import Form1 from "./Information";
+import Form2 from "./Experience";
+import Form3 from "./Education";
+
+import "../App.css";
 
 function MyPage() {
   const [submittedText, setSubmittedText] = useState([]);
@@ -26,20 +27,25 @@ function MyPage() {
         {submittedText.map((formObject, index) => (
           <div key={index} className="content-item">
             <div className="content-info">
-            
               {index === 0 && (
-              <div className="content-image">
-                <img className='avatar-image' src={require(`../images/avatar.png`)}  />
-              </div>
-            )}  <h1>
-                {index === 0 && 'Information'}
-                {index === 1 && 'Experience'}
-                {index === 2 && 'Education'}
+                <div className="content-image">
+                  <p>{formObject.name}</p>
+                  <p>{formObject.email}</p>
+                  <img
+                    className="avatar-image"
+                    src={require(`../images/avatar.png`)}
+                    alt="avatar"
+                  />
+                </div>
+              )}
+              <h1>{index === 0 && "Information"}</h1>
+              <h1>
+                {index === 1 && "Experience"}
+                {index === 2 && "Education"}
               </h1>
-              <p>Name: {formObject.name}</p>
-              <p>Email: {formObject.email}</p>
+              <p>{formObject.name}</p>
+              <p>{formObject.email}</p>
             </div>
-            
           </div>
         ))}
       </div>
