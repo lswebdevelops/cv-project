@@ -1,12 +1,11 @@
-import React, { useState } from "react";
 
+import React, { useState } from "react";
 function Form2({ setSubmittedText, formIndex }) {
   const [position, setPosition] = useState("");
   const [company, setCompany] = useState("");
   const [expCity, setExpCity] = useState("");
   const [expFrom, setExpFrom] = useState("");
   const [expTo, setExpTo] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
@@ -18,7 +17,6 @@ function Form2({ setSubmittedText, formIndex }) {
     };
     setSubmittedText(formIndex, formData);
   };
-
   return (
     <form className="form-experience" onSubmit={handleSubmit}>
       <h2>Experience</h2>
@@ -76,5 +74,4 @@ function Form2({ setSubmittedText, formIndex }) {
     </form>
   );
 }
-
 export default Form2;

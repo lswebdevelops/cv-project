@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 
+import React, { useState } from 'react';
 function Form1({ setSubmittedText, formIndex }) {
    const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -8,7 +8,6 @@ function Form1({ setSubmittedText, formIndex }) {
   const [address, setAddress] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [description, setDescription] = useState('');
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
@@ -22,7 +21,6 @@ function Form1({ setSubmittedText, formIndex }) {
     };
     setSubmittedText(formIndex, formData);
   };
-
   return (
     <form className="form-information" onSubmit={handleSubmit}>
       <h2>Information</h2>
@@ -79,5 +77,4 @@ function Form1({ setSubmittedText, formIndex }) {
     </form>
   );
 }
-
 export default Form1;

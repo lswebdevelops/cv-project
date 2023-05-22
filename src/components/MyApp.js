@@ -1,21 +1,20 @@
+
 import React, { useState } from "react";
 import Form1 from "./Information";
 import Form2 from "./Experience";
 import Form3 from "./Education";
-
 import "../App.css";
-
 function MyPage() {
   const [submittedText, setSubmittedText] = useState([]);
+  const dash = "-";
 
-  const handleSetSubmittedText = (formIndex, formObject) => {
+   const handleSetSubmittedText = (formIndex, formObject) => {
     setSubmittedText((prevSubmittedText) => {
       const updatedText = [...prevSubmittedText];
       updatedText[formIndex] = formObject;
       return updatedText;
     });
   };
-
   return (
     <div className="container">
       <div className="input-forms">
@@ -30,11 +29,10 @@ function MyPage() {
               {index === 0 && (
                 <div className="content-image">
                   <div className="div-fistlastname">
-                    <p>{formObject.firstName}</p>
-                    <p>{formObject.lastName}</p>
+                    <p>{formObject.firstName} {formObject.lastName}</p>
+                        <br/>
                     <p>{formObject.title}</p>
                   </div>
-
                   <img
                     className="avatar-image"
                     src={require(`../images/avatar.png`)}
@@ -43,7 +41,6 @@ function MyPage() {
                 </div>
               )}
               <h1>{index === 0 && "Information"}</h1>
-
               <h1>
                 {index === 1 && "Experience"}
                 {index === 2 && "Education"}
@@ -55,14 +52,19 @@ function MyPage() {
               <p>{formObject.position}</p>
               <p>{formObject.company}</p>
               <p>{formObject.expCity}</p>
-              <p>{formObject.expFrom} - {formObject.expTo}</p>
+              {formObject.expFrom && formObject.expTo && (
+  <p>{`${formObject.expFrom} - ${formObject.expTo}`}</p>
+)}
+
               <p>{formObject.name}</p>
               <p>{formObject.eduEmail}</p>
               <p>{formObject.university}</p>
               <p>{formObject.city}</p>
               <p>{formObject.degree}</p>
               <p>{formObject.subject}</p>
-              <p>{formObject.from} - {formObject.to}</p>
+              {formObject.from && formObject.to && (
+        <p>{`${formObject.from} ${dash} ${formObject.to}`}</p>
+      )}
             </div>
           </div>
         ))}
@@ -70,5 +72,4 @@ function MyPage() {
     </div>
   );
 }
-
 export default MyPage;

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 
+import React, { useState } from "react";
 function Form3({ setSubmittedText, formIndex }) {
   const [name, setName] = useState("");
   const [eduEmail, setEduEmail] = useState("");
@@ -9,7 +9,6 @@ function Form3({ setSubmittedText, formIndex }) {
   const [subject, setSubject] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
@@ -24,7 +23,6 @@ function Form3({ setSubmittedText, formIndex }) {
     };
     setSubmittedText(formIndex, formData);
   };
-
   return (
     <form className="form-education" onSubmit={handleSubmit}>
       <h2>Education</h2>
@@ -49,6 +47,19 @@ function Form3({ setSubmittedText, formIndex }) {
           onChange={(e) => setUniversity(e.target.value)}
         />
       </label>
+      {/* eduEmail, setEduEmail */}
+
+      <label>
+       
+       <input
+         className="input-form"
+         placeholder="Email"
+         type="email"
+         value={eduEmail}
+         onChange={(e) => setEduEmail(e.target.value)}
+       />
+     </label>
+
       <label>
        
         <input
@@ -103,5 +114,4 @@ function Form3({ setSubmittedText, formIndex }) {
     </form>
   );
 }
-
 export default Form3;
